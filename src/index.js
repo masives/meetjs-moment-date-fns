@@ -1,18 +1,22 @@
-import moment from 'moment';
+import format from 'date-fns/format';
+import subDays from 'date-fns/sub_days';
+import pl from 'date-fns/locale/pl';
+let now = new Date();
 
-let now = moment();
 console.log(`dzisiaj jest ${now}`);
 
-now = now.format('D-M-YYYY');
+now = format(now, 'D-M-YYYY');
 console.log(`ładniej sformatowane ${now}`);
 
-moment.locale('pl');
-
-now = moment().format('dddd D MMMM Y');
+// now = moment().format('dddd D MMMM Y');
+now = format(new Date(), 'dddd D MMMM YYYY', {
+  locale: pl
+});
 console.log(`Albo po polsku -  ${now}`);
 
+const yesterday = subDays(new Date(), 1);
 console.log(
-  `Wczoraj był ${moment()
-    .subtract(1, 'days')
-    .format('dddd D MMMM Y')}`
+  `Wczoraj był ${format(yesterday, 'dddd D MMMM YYYY', {
+    locale: pl
+  })}`
 );
