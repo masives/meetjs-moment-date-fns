@@ -1,5 +1,4 @@
 import moment from 'moment';
-// import pl from 'moment/locale/pl.js';
 
 let now = moment();
 console.log(`dzisiaj jest ${now}`);
