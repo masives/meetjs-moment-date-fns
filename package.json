@@ -1,0 +1,20 @@
+{
+  "name": "moment-date-fns",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "Jozef Piecyk",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --env.mode development --watch",
+    "webpack-dev-server": "webpack-dev-server"
+  },
+  "dependencies": {
+    "date-fns": "^1.29.0",
+    "html-webpack-plugin": "^3.2.0",
+    "moment": "^2.0.0",
+    "webpack": "^4.25.1",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
