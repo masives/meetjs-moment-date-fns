@@ -5,7 +5,8 @@
   "author": "Jozef Piecyk",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --env.mode development --watch",
+    "dev": "webpack --env.mode development --watch",
+    "build": "webpack --env.mode production --watch",
     "webpack-dev-server": "webpack-dev-server"
   },
   "dependencies": {
