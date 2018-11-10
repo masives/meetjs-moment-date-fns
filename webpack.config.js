@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackBundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
+const { ContextReplacementPlugin } = require('webpack');
 
 module.exports = ({ mode } = { mode: 'development' }) => ({
   mode,
@@ -22,6 +23,7 @@ module.exports = ({ mode } = { mode: 'development' }) => ({
     new HtmlWebpackPlugin({
       template: './index.html'
     }),
-    new WebpackBundleAnalyzer({ openAnalyzer: false })
+    new WebpackBundleAnalyzer({ openAnalyzer: false }),
+    new ContextReplacementPlugin(/moment[/\\]locale$/, /pl|en|de/)
   ]
 });
