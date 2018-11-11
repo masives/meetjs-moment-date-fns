@@ -23,7 +23,7 @@ module.exports = ({ mode } = { mode: 'development' }) => ({
     new HtmlWebpackPlugin({
       template: './index.html'
     }),
-    new WebpackBundleAnalyzer({ openAnalyzer: false }),
-    new ContextReplacementPlugin(/date\-fns[\/\\]/, new RegExp(`[/\\\\\](pl|en|de)[/\\\\\]`))
+    new WebpackBundleAnalyzer({ openAnalyzer: false })
+    // new ContextReplacementPlugin(/date\-fns[\/\\]/, new RegExp(`[/\\\\\](pl|en|de)[/\\\\\]`))
   ]
 });
